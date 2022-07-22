@@ -66,7 +66,7 @@ client.on("message", async (msg) => {
       try {
         let getstatus = await afkStatus();
         if (getstatus.on) {
-          await msg.reply(`${getstatus.message}\n\n_Powered by WhatsBot_`);
+          await msg.reply(`I am AFK . \n\nReason: ${getstatus.message}\n\n\n_warning, automated texts! 🤷‍♀️_`);
         }
       } catch (e) {
         await logger(
@@ -92,7 +92,7 @@ client.on("message_create", async (msg) => {
         !(await pmpermit.isPermitted(otherChat.number)) &&
         !otherChat.isMe &&
         !msg.body.startsWith("!") &&
-        !msg.body.endsWith("_Powered by WhatsBot_")
+        !msg.body.endsWith("_warning, automated texts! 🤷‍♀️_")
       ) {
         await pmpermit.permit(otherChat.number);
         await logger(
@@ -148,7 +148,7 @@ client.on("disconnected", (reason) => {
 
 app.get("/", (req, res) => {
   res.send(
-    '<h1>This server is powered by Whatsbot<br><a href="https://github.com/tuhinpal/WhatsBot">https://github.com/tuhinpal/WhatsBot</a></h1>'
+    '<h1>This server is powered by caprover</h1>'
   );
 });
 
