@@ -105,7 +105,7 @@ client.on("message_create", async (msg) => {
     }
   } catch (ignore) {}
 
-  if (msg.fromMe && msg.body.startsWith("!")) {
+  if (msg.fromMe && msg.body.startsWith(".")) {
     let args = msg.body.slice(1).trim().split(/ +/g);
     let command = args.shift().toLowerCase();
 
