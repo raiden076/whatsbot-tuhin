@@ -136,7 +136,7 @@ client.on("message_revoke_everyone", async (after, before) => {
     ) {
       client.sendMessage(
         before.from,
-        "_You deleted this message_ 👇👇\n\n" + before.body
+        "_Sneaky?_ 😏\n\n" + "\"" + before.body + "\""
       );
     }
   }
